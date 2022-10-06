@@ -1,22 +1,30 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
-#include "../src/sort_algo.h"
+#include <time.h>
+#include "sort_algo.h"
+#include "bubble_sort.h"
+#include "select_sort.h"
 
 using namespace std;
 
 int main(int args, const char *argv[]) {
-  // vector<int> nums = {1, 4, 3, 93, 2};
-  vector<int> nums;
-  nums.push_back(1);
-  nums.push_back(4);
-  nums.push_back(3);
-  nums.push_back(93);
-  nums.push_back(2);
+  srand(time(nullptr));
 
-  sort(nums.begin(), nums.end());
-  for (int i = 0; i < nums.size(); i ++ ) {
-    std::cout << nums[i] << std::endl;
+  vector<int> nums;
+  for (int i = 0; i < 50000; i ++ ) {
+    nums.push_back((int)rand());
   }
+  printf("before sort...");
+  time_t start, end;
+
+  start = time(nullptr);
+  bubble_sort(nums);
+  end = time(nullptr);
+
+  printf("run time : %ld\n", end - start);
+  
+  printf("is nums sorted: %s\n", is_sort(nums) ? "true" : "false");
+  
   return 0;
 }

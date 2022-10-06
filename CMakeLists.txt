@@ -5,6 +5,9 @@ project(SortAlgo)
 MESSAGE(STATUS "BINARY DIR: " ${PROJECT_BINARY_DIR})
 MESSAGE(STATUS "SOURCE DIR: " ${PROJECT_SOURCE_DIR})
 
+# head file patch
+include_directories(src)
+
 # source file path
 # aux_source_directory(src/ DIR_SRCS)
 aux_source_directory(test/ DIR_SRCS)
