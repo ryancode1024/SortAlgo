@@ -1,4 +1,4 @@
 template <typename T>
-void bubble_sort(int *nums) {
-
+void bubble_sort(T *nums) {
+  
 }

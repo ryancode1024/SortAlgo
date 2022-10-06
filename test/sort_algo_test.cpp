@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-// #include "src/sort_algo.h"
+#include "../src/sort_algo.h"
 
 using namespace std;
 
